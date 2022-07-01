@@ -1,6 +1,4 @@
 #Load Modules
-Import-Module posh-git
-Import-Module oh-my-posh
 Import-Module -Name Terminal-Icons
 
 #Load Aliases
@@ -13,8 +11,7 @@ Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 
 
 #Set Prompt
-$omp_config = Join-Path $PSScriptRoot ".\takuya.omp.json"
-oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
+oh-my-posh init pwsh --config "$env:HOMEDIRVE\GitHub\PowerShell\.config\powershell\config.omp.json"  | Invoke-Expression
 
 # PSReadLine
 Set-PSReadLineOption -EditMode Emacs
